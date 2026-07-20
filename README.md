@@ -11,6 +11,9 @@
 
 # Install on AllianceCan
 
+## Prereqs
+1. If you are using iTerm on your local, it is best to set at least one option key to "Esc+".
+
 ## Install base Neovim
 1. cd ~
 2. git clone https://github.com/neovim/neovim.git
