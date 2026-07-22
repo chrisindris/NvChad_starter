@@ -16,8 +16,8 @@
 
 ## Install base Neovim
 1. cd ~
-2. git clone https://github.com/neovim/neovim.git
-3. make CMAKE_INSTALL_PREFIX=/project/def-wangcs/$USER/nvim CMAKE_BUILD_TYPE=Release
+2. git clone https://github.com/neovim/neovim.git && cd neovim
+3. make CMAKE_INSTALL_PREFIX=/project/def-wangcs/$USER/ CMAKE_BUILD_TYPE=Release install
 4. mv /home/$USER/.local/state/nvim/shada/main.shada.tmp.m /home/$USER/.local/state/nvim/shada/main.shada
 
 ## Clear existing configs and caches
@@ -37,20 +37,19 @@ export PATH=$PATH:/home/.cargo/bin/
 export PATH=$PATH:/home/$USER/nvim/bin/
 export PATH=$PATH:/home/$USER/bin/
 export PATH=$PATH:/home/$USER/bin/bin/
+export PATH=$PATH:/project/def-wangcs/$USER/bin/
 
 ## Get RipGrep
 1. cd /home/$USER/bin/
-2. wget https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.10/tree-sitter-cli-linux-x64.zip
+2. wget https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-aarch64-unknown-linux-gnu.tar.gz
 3. tar -xzvf ripgrep-15.1.0-aarch64-unknown-linux-gnu.tar.gz
 4. chmod +x ripgrep-15.1.0-aarch64-unknown-linux-gnu/complete/rg.bash
 
 ## Get Tree-Sitter
 1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/bin/i
 
-
 ## Get Copilot
 1. git clone --depth=1 https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
-
 
 ## Non-Neovim, but still useful (any subset of the following acceptable to install):
 
@@ -59,7 +58,7 @@ export PATH=$PATH:/home/$USER/bin/bin/
 2. Log in via option 2 (device code); ensure that device code authorization is enabled in your account
 
 ### Grok Build
-1. Install Grok Build on AllianceCan: `curl -fsSL https://chatgpt.com/codex/install.sh | sh`
+1. Install Grok Build on AllianceCan: `curl -fsSL https://x.ai/cli/install.sh | bash`
 2. Run "agent" and follow instructions
 
 ## shfmt
