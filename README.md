@@ -46,10 +46,7 @@ export PATH=$PATH:/project/def-wangcs/$USER/bin/
 4. chmod +x ripgrep-15.1.0-aarch64-unknown-linux-gnu/complete/rg.bash
 
 ## Get Tree-Sitter
-1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/bin/i
-
-## Get Copilot
-1. git clone --depth=1 https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/bin/
 
 ## Non-Neovim, but still useful (any subset of the following acceptable to install):
 
@@ -70,7 +67,8 @@ go install mvdan.cc/sh/v3/cmd/shfmt@v3.7.0
 
 ## Complete Install
 1. git clone https://github.com/chrisindris/NvChad_starter ~/.config/nvim && nvim
-2. :MasonInstallAll
+2. git clone --depth=1 https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+3. :MasonInstallAll
 Install the following:
       ast-grep
       bash-debug-adapter
@@ -85,5 +83,5 @@ Install the following:
       pyright
       shellharden
       stylua
-3. :TSInstallAll
-4. :Copilot auth
+4. :TSInstallAll
+5. :Copilot auth
