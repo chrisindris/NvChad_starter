@@ -66,9 +66,10 @@ export PATH=$PATH:/home/$USER/go/bin/
 go install mvdan.cc/sh/v3/cmd/shfmt@v3.7.0
 
 ## Complete Install
-1. git clone https://github.com/chrisindris/NvChad_starter ~/.config/nvim && nvim
+1. git clone https://github.com/chrisindris/NvChad_starter ~/.config/nvim
 2. git clone --depth=1 https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
-3. :MasonInstallAll
+3. nvim
+4. :MasonInstallAll
 Install the following:
       ast-grep
       bash-debug-adapter
@@ -83,5 +84,5 @@ Install the following:
       pyright
       shellharden
       stylua
-4. :TSInstallAll
-5. :Copilot auth
+5. :TSInstallAll
+6. :Copilot auth
