@@ -46,7 +46,7 @@ export PATH=$PATH:/project/def-wangcs/$USER/bin/
 4. chmod +x ripgrep-15.1.0-aarch64-unknown-linux-gnu/complete/rg.bash
 
 ## Get Tree-Sitter
-1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/bin/
+1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/
 
 ## Non-Neovim, but still useful (any subset of the following acceptable to install):
 
