@@ -62,6 +62,13 @@ export PATH=$PATH:/home/$USER/bin/bin/
 1. Install Grok Build on AllianceCan: `curl -fsSL https://chatgpt.com/codex/install.sh | sh`
 2. Run "agent" and follow instructions
 
+## shfmt
+### Put the following into ~/.bashrc (and source ~/.bashrc)
+module load go
+export PATH=$PATH:/home/$USER/go/bin/
+### Install a compatible version of shfmt
+go install mvdan.cc/sh/v3/cmd/shfmt@v3.7.0
+
 ## Complete Install
 1. git clone https://github.com/chrisindris/NvChad_starter ~/.config/nvim && nvim
 2. :MasonInstallAll
