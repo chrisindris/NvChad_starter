@@ -45,6 +45,38 @@ return {
     end,
   },
 
+  -- Local submodule: plugin/ + autoload/ must both be on rtp.
+  -- A lone ~/.config/nvim/plugin symlink only sources the command,
+  -- which then fails with E117: Unknown function: shfmt#shfmt.
+  {
+    "z0mbix/vim-shfmt",
+    dir = vim.fn.stdpath("config") .. "/vim-shfmt",
+    cmd = "Shfmt",
+    ft = "sh",
+  },
+
+  -- nvim v0.8.0
+  {
+      "kdheepak/lazygit.nvim",
+      lazy = true,
+      cmd = {
+          "LazyGit",
+          "LazyGitConfig",
+          "LazyGitCurrentFile",
+          "LazyGitFilter",
+          "LazyGitFilterCurrentFile",
+      },
+      -- optional for floating window border decoration
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+      },
+      -- setting the keybinding for LazyGit with 'keys' is recommended in
+      -- order to load the plugin when the command is run for the first time
+      keys = {
+          { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+      }
+  }
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
