@@ -49,7 +49,7 @@ export PATH=$PATH:$HOME/go/bin/
 ## Get Tree-Sitter
 1. cargo install tree-sitter-cli --root /project/def-wangcs/$USER/
 
-## Non-Neovim, but still useful (any subset of the following acceptable to install):
+## AI CLIs 
 
 ### Codex
 1. Install Codex CLI on AllianceCan: `curl -fsSL https://chatgpt.com/codex/install.sh | sh` 
@@ -58,6 +58,16 @@ export PATH=$PATH:$HOME/go/bin/
 ### Grok Build
 1. Install Grok Build on AllianceCan: `curl -fsSL https://x.ai/cli/install.sh | bash`
 2. Run "agent" and follow instructions
+
+### Copilot
+1. curl -fsSL https://gh.io/copilot-install | bash
+2. copilot login
+
+### Antigravity
+1. curl -fsSL https://antigravity.google/cli/install.sh | bash
+2. agy
+
+## Non-Neovim, but still useful (any subset of the following acceptable to install):
 
 ### shfmt
 1. go install mvdan.cc/sh/v3/cmd/shfmt@v3.7.0
