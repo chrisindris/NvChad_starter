@@ -14,6 +14,24 @@ M.base46 = {
 	-- },
 }
 
+M.ui = {
+  statusline = {
+    modules = {
+      lsp = function()
+        if rawget(vim, "lsp") then
+          local utils = require "nvchad.stl.utils"
+          for _, client in ipairs(vim.lsp.get_clients()) do
+            if client.name ~= "copilot" and client.attached_buffers[utils.stbufnr()] then
+              return (vim.o.columns > 100 and "%#St_Lsp#   LSP ~ " .. client.name .. " ") or "%#St_Lsp#   LSP "
+            end
+          end
+        end
+        return ""
+      end,
+    },
+  },
+}
+
 -- M.nvdash = { load_on_startup = true }
 -- M.ui = {
 --       tabufline = {

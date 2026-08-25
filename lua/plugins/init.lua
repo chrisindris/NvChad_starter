@@ -5,6 +5,18 @@ return {
     opts = require "configs.conform",
   },
 
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "pyright",
+        "html-lsp",
+        "css-lsp",
+        "lua-language-server",
+      },
+    },
+  },
+
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
@@ -24,9 +36,9 @@ return {
           hide_during_completion = true,
           debounce = 75,
           keymap = {
-            accept = "<M-y>",      -- Alt + l to accept suggestion
+            accept = "<M-y>",      -- Alt + y to accept suggestion
             accept_word = "<M-w>",
-            accept_line = "M-l",
+            accept_line = "<M-l>",
             next = "<M-]>",       -- Alt + ] for next suggestion
             prev = "<M-[>",       -- Alt + [ for previous suggestion
             dismiss = "<C-]>",     -- Ctrl + ] to dismiss
